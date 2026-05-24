@@ -29,8 +29,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+  history: createWebHistory(process.env.NODE_ENV === 'production' ? '/Tlias-management/' : '/'),
+  routes
 });
 
 export default router;
